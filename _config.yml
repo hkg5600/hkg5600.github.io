@@ -106,19 +106,10 @@ author:
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://ghs-dev.tistory.com/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-
+      url: "https://github.com/hkg5600/"
+   
 # Site Footer
 footer:
   links:
