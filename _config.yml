@@ -16,6 +16,7 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
+discus_shortname         : "https://hkg5600.github.io/"
 locale                   : "en-US"
 title                    : "고현석의 기술 정리 io"
 title_separator          : "-"
