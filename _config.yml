@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 
- remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -20,8 +20,8 @@ locale                   : "en-US"
 title                    : "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "고현석의 기술 정리 io"
+description              : "기술 정리 블로그"
 url                      : "https://hkg5600.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,11 +95,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "고현석"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "안드로이드 개발자"
   location         : "Somewhere"
-  email            :
+  email            : hkg5600@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
