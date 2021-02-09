@@ -141,7 +141,7 @@ class MainViewModel @ViewModelInject constructor(
   
   private val _products = MutableLiveData<List<Product>>()  
   val product : LiveData<List<Product>>  
-  get() = _products  
+    get() = _products  
   
   init {  
     getProducts()  
