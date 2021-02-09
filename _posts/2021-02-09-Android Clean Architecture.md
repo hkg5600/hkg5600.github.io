@@ -18,6 +18,7 @@
 ### 1. data/api
 
 > data/api/ProductApi
+
 ```kotlin
 interface ProductApi {  
   @GET("some-urls-get-products")  
@@ -26,6 +27,7 @@ interface ProductApi {
 ```
 
 > data/api/model/ProductRemote
+
 ```kotlin
 data class ProductRemote(  
   val id: String,  
@@ -38,7 +40,8 @@ data class ProductRemote(
 
 ### 2. data/datasource
 
->data/datasource/RemoteProductDataSource
+> data/datasource/RemoteProductDataSource
+
 ```kotlin
 class RemoteProductDataSource @Inject constructor(  
   private val api: ProductApi  
@@ -64,6 +67,7 @@ class ProductRepositoryImpl @Inject constructor(
 ```
 
 > data/api/mapper/ProductRemoteMapper.kt 또는 data/api/model/ProductRemote의 내부
+
 ```kotlin
 fun List<ProductRemote>.toDomainModel() : List<Product> {  
   return this.map {  
@@ -85,6 +89,7 @@ fun ProductRemote.toDomainModel() : Product {
 ### 4. domain/repository
 
 > domain/repository/ProductRepository
+
 ```kotlin
 interface ProductRepository {  
   suspend fun getProducts() : List<Product>  
@@ -94,6 +99,7 @@ interface ProductRepository {
 ### 5. domain/usecase
 
 > domain/usecase/GetProductsUseCase
+
 ```kotlin
 class GetProductsUseCase @Inject constructor(  
   private val repository: ProductRepository,  
@@ -108,6 +114,7 @@ class GetProductsUseCase @Inject constructor(
 ```
 
 > domain/usecase/utils/CoroutineUseCase
+
 ```kotlin
 abstract class CoroutineUseCase<P, R>(private val coroutineDispatcher: CoroutineDispatcher) {  
   
@@ -127,6 +134,7 @@ abstract class CoroutineUseCase<P, R>(private val coroutineDispatcher: Coroutine
 ```
 
 > domain/usecase/utils/Result
+
 ```kotlin
 sealed class Result<out T> {  
   data class Success<T>(val data: T) : Result<T>()  
@@ -143,6 +151,7 @@ val <T> Result<T>.data //Success일 경우에만 사용하도록 주의
 ### 6. presentation/viewmodel
 
 > presentation/main/MainViewModel
+
 ```kotlin
 class MainViewModel @ViewModelInject constructor(  
   private val getProductsUseCase: GetProductsUseCase  
@@ -169,9 +178,11 @@ class MainViewModel @ViewModelInject constructor(
   }  
 }
 ```
+
 ### 7. dependency injection
 
 > di/RetrofitModule
+
 ```kotlin
 @Module  
 @InstallIn(ApplicationComponent::class)  
@@ -186,7 +197,8 @@ object RetrofitModule {
 }
 ```
 
->di/RepositoryModule
+> di/RepositoryModule
+
 ```kotlin
 @Module  
 @InstallIn(ApplicationComponent::class)  
@@ -203,11 +215,13 @@ object RepositoryModule {
 ```
 
 > di/IoDispatcher
+
 ```kotlin
 annotation class IoDispatcher
 ```
 
 > di/CoroutineModule
+
 ```kotlin
 @InstallIn(ApplicationComponent::class)  
 @Module  
