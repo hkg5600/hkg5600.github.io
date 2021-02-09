@@ -55,6 +55,7 @@ class RemoteProductDataSource @Inject constructor(
 ### 3. data/repository
 
 > data/repository/ProductRepositoryImpl
+
 ```kotlin
 class ProductRepositoryImpl @Inject constructor(  
   private val dataSource: RemoteProductDataSource  
