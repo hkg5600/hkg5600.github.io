@@ -230,7 +230,8 @@ annotation class IoDispatcher
 object CoroutinesModule {  
   
   @IoDispatcher  
-  @Provides  fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO  
+  @Provides  
+  fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO  
       
 }
 ```
