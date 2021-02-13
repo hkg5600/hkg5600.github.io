@@ -206,7 +206,8 @@ object RetrofitModule {
 object RepositoryModule {  
   
   @Singleton  
-  @Provides  fun provideProductRepository(  
+  @Provides  
+  fun provideProductRepository(  
     remoteProductDataSource: RemoteProductDataSource  
   ) : ProductRepository {  
     return ProductRepositoryImpl(remoteProductDataSource)  
